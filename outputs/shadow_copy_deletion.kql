@@ -1,0 +1,5 @@
+// Shadow Copy Deletion (Simulated) – 2026-02-02
+DeviceProcessEvents
+| where TimeGenerated between (datetime(2026-02-02) .. datetime(2026-02-03))
+| where FileName =~ "vssadmin.exe"
+| where ProcessCommandLine has "delete shadows"

@@ -1,0 +1,5 @@
+// Impossible Travel (Simulated) – 2026-02-02
+SigninLogs
+| where TimeGenerated between (datetime(2026-02-02) .. datetime(2026-02-03))
+| where ResultType == 0
+| summarize makeset(Location), min(TimeGenerated), max(TimeGenerated) by UserPrincipalName
