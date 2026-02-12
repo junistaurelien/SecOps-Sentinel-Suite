@@ -70,7 +70,6 @@ Key outcomes from the implemented workflows:
 SecOps-Sentinel-Suite/
 ├── screenshots/
 ├── kql/
-├── dashboards/
 ├── playbooks/
 └── README.md
 
