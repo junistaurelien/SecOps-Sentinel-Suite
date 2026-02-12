@@ -1,0 +1,5 @@
+// Brute Force Then Success (Simulated) – 2026-02-02
+SigninLogs
+| where TimeGenerated between (datetime(2026-02-02) .. datetime(2026-02-03))
+| summarize Failures=countif(ResultType != 0), Successes=countif(ResultType == 0) by UserPrincipalName, IPAddress, bin(TimeGenerated, 10m)
+| where Failures >= 2 and Successes >= 1

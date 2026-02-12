@@ -1,0 +1,6 @@
+// Suspicious PowerShell spawned by Office (Simulated) – 2026-02-02
+DeviceProcessEvents
+| where TimeGenerated between (datetime(2026-02-02) .. datetime(2026-02-03))
+| where FileName =~ "powershell.exe"
+| where InitiatingProcessFileName in~ ("winword.exe","excel.exe","powerpnt.exe")
+| where ProcessCommandLine has_any ("-enc","-w hidden","-nop")
