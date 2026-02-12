@@ -1,0 +1,5 @@
+AlertId,RuleId,AlertName,Severity,TimeGenerated,Entity,Asset,PriorityScore,Mitre,Response
+ALERT-20260202-004,SOP-004,Shadow Copy Deletion,Critical,2026-02-02T10:35:12Z,contoso\jdoe,FIN-WS-014,98,TA0040|T1490,Isolate host; Contain ransomware; Start IR process
+ALERT-20260202-003,SOP-003,Suspicious PowerShell from Office App,High,2026-02-02T10:16:44Z,contoso\jdoe,FIN-WS-014,90,TA0002|T1059.001,Isolate host; Collect triage package; Hunt similar activity
+ALERT-20260202-001,SOP-001,Impossible Travel Sign-in,High,2026-02-02T08:48:03Z,j.smith@contoso.com,AzureAD,85,TA0001|T1078,Reset password; Revoke sessions; Review MFA
+ALERT-20260202-002,SOP-002,Brute Force Then Success,High,2026-02-02T09:03:02Z,svc-backup@contoso.com,AzureAD,80,TA0006|T1110,Block IP; Force MFA; Investigate account activity

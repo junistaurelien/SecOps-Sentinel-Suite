@@ -1,0 +1,29 @@
+SECOPS EXECUTIVE BRIEF – ALERT TRIAGE AUTOMATION
+Date: 2026-02-02
+Generated: 2026-02-02 11:30:00
+
+1) Executive Summary
+This brief summarizes prioritized security signals detected from simulated Sentinel telemetry. The objective is to demonstrate an automation-driven triage workflow that reduces manual review and accelerates response decisions.
+
+2) Exposure Snapshot
+- Total Alerts: 4
+- Critical: 1 | High: 3
+
+3) Top Alerts (Highest Priority)
+- [Critical] Shadow Copy Deletion on FIN-WS-014 | Entity=contoso\jdoe | Score=98
+  Recommendation: Isolate host; Contain ransomware; Start IR process
+- [High] Suspicious PowerShell from Office App on FIN-WS-014 | Entity=contoso\jdoe | Score=90
+  Recommendation: Isolate host; Collect triage package; Hunt similar activity
+- [High] Impossible Travel Sign-in on AzureAD | Entity=j.smith@contoso.com | Score=85
+  Recommendation: Reset password; Revoke sessions; Review MFA
+
+4) Recommended Actions (Next 24 Hours)
+- Contain FIN-WS-014 immediately if shadow copy deletion confirmed; initiate incident response.
+- Validate suspicious PowerShell execution chain; hunt across endpoints for similar parent-child process patterns.
+- Investigate svc-backup sign-in sequence; enforce MFA and block suspicious IP where applicable.
+- Validate user travel for impossible travel alert; revoke sessions if unconfirmed.
+
+5) Notes
+This project uses deterministic enrichment and simulated data for demonstration. Extend by connecting to Sentinel API, MDE Advanced Hunting, and automated ticketing.
+
+End of Brief
