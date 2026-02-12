@@ -1,35 +1,76 @@
-# SecOps-Sentinel-Suite
+# 🛡️ SecOps Sentinel Suite
+### *AI-Augmented Detection & Response (Microsoft Sentinel + Defender for Endpoint)*
 
-🛡 SecOps Sentinel Suite – AI-Augmented Detection & Response
-📌 Overview
+<p align="center">
+  <img src="screenshots/SecOps%20Sentinel%20Suite%20%E2%80%93%20AI-Augmented%20Detection%20%26%20Response.jpg"
+       alt="SecOps Sentinel Suite – AI-Augmented Detection & Response"
+       width="450">
+</p>
 
-This project demonstrates proactive detection engineering and security automation using Microsoft Sentinel and Defender for Endpoint.
+<p align="center">
+  <b>Detection engineering + SOC automation</b><br/>
+  Built to simulate real-world SecOps workflows with AI-assisted tuning.
+</p>
 
-Designed to simulate real-world SOC workflows with AI-assisted optimization logic.
+---
 
-🎯 Objectives
+## 📌 Overview
+**SecOps Sentinel Suite** is a hands-on security project showcasing **proactive detection engineering** and **security automation** using:
 
-✔ Engineer custom KQL detection rules
-✔ Reduce false positives
-✔ Automate containment logic
-✔ Visualize attack patterns
+- **Microsoft Sentinel (SIEM)** for KQL detections + analytics
+- **Microsoft Defender for Endpoint (EDR)** for endpoint telemetry + response actions
+- **AI-assisted optimization** to reduce noise and improve detection signal
 
-🔍 Use Cases Implemented
+Think: *“SOC analyst workflows—compressed into a portfolio-ready project.”* 🚀
 
-Brute Force Detection
+---
 
-Impossible Travel
+## 🎯 Objectives
+This project is designed to:
 
-Suspicious Process Execution
+- ✅ Build and tune **custom KQL detection rules**
+- ✅ Reduce **false positives** (less noise, more signal)
+- ✅ Automate **containment / response logic**
+- ✅ Visualize **attack patterns** and security trends via dashboards
 
-Data Exfiltration Indicators
+---
 
-🧠 AI-Augmented Workflow
+## 🔍 Use Cases Implemented
+Current detection scenarios include:
 
-Detection thresholds were refined using AI-assisted query analysis and logic enhancement to reduce noise and improve signal accuracy.
+- **Brute Force Detection** (failed sign-in bursts, threshold logic)
+- **Impossible Travel** (geo-velocity / location anomaly patterns)
+- **Suspicious Process Execution** (unusual parent-child behavior)
+- **Data Exfiltration Indicators** (spikes, unusual destinations, abnormal volume)
 
-📈 Security Impact
+---
 
-• Reduced simulated brute force incidents to zero
-• Automated isolation triggers
-• Faster threat visibility via dashboards
+## 🧠 AI-Augmented Workflow (The Fun Part)
+To make detections stronger and cleaner, I used AI to help:
+
+- 🧩 Refactor KQL logic for clarity + efficiency  
+- 🎯 Adjust thresholds to reduce alert fatigue  
+- 🧪 Validate detection assumptions with edge cases  
+- 🧼 Improve signal quality (fewer “meh” alerts, more “oh wow” alerts)
+
+---
+
+## 📈 Security Impact (Simulated)
+Key outcomes from the implemented workflows:
+
+- 🔒 Reduced simulated brute-force success paths to **near zero**
+- ⚡ Automated isolation triggers for high-confidence endpoint events
+- 📊 Faster visibility into threats using dashboards + structured alerting
+- 📝 Cleaner documentation for repeatable SOC playbooks
+
+---
+
+## 🗂️ Repo Structure
+```text
+SecOps-Sentinel-Suite/
+├── screenshots/
+├── kql/
+├── dashboards/
+├── playbooks/
+└── README.md
+
