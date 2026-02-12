@@ -1,0 +1,73 @@
+{
+  "RunDate": "2026-02-02",
+  "Rules": [
+    {
+      "RuleId": "SOP-001",
+      "Name": "Impossible Travel Sign-in",
+      "Type": "Signin",
+      "Severity": "High",
+      "Logic": "Same user successful sign-in from locations > 1000 miles within 60 minutes.",
+      "Mitre": [
+        "TA0001",
+        "T1078"
+      ],
+      "Response": [
+        "Reset password",
+        "Revoke sessions",
+        "Review MFA"
+      ],
+      "SlaHours": 4
+    },
+    {
+      "RuleId": "SOP-002",
+      "Name": "Brute Force Then Success",
+      "Type": "Signin",
+      "Severity": "High",
+      "Logic": ">=2 failures then success from same IP within 10 minutes for same account.",
+      "Mitre": [
+        "TA0006",
+        "T1110"
+      ],
+      "Response": [
+        "Block IP",
+        "Force MFA",
+        "Investigate account activity"
+      ],
+      "SlaHours": 4
+    },
+    {
+      "RuleId": "SOP-003",
+      "Name": "Suspicious PowerShell from Office App",
+      "Type": "Process",
+      "Severity": "High",
+      "Logic": "powershell.exe spawned by winword.exe with -enc or hidden window.",
+      "Mitre": [
+        "TA0002",
+        "T1059.001"
+      ],
+      "Response": [
+        "Isolate host",
+        "Collect triage package",
+        "Hunt similar activity"
+      ],
+      "SlaHours": 2
+    },
+    {
+      "RuleId": "SOP-004",
+      "Name": "Shadow Copy Deletion",
+      "Type": "Process",
+      "Severity": "Critical",
+      "Logic": "vssadmin delete shadows executed.",
+      "Mitre": [
+        "TA0040",
+        "T1490"
+      ],
+      "Response": [
+        "Isolate host",
+        "Contain ransomware",
+        "Start IR process"
+      ],
+      "SlaHours": 1
+    }
+  ]
+}
